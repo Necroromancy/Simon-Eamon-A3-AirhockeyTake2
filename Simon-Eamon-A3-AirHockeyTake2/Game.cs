@@ -1,13 +1,9 @@
-﻿// Include code libraries you need below (use the namespace).
-using System;
+﻿using System;
 using System.Numerics;
 
-// The namespace your code is in.
 namespace Game10003
 {
-    /// <summary>
-    ///     Your game code goes inside this class!
-    /// </summary>
+  
     public class Game
     {
         // Place your variables here:
@@ -18,7 +14,10 @@ namespace Game10003
         /// </summary>
         public void Setup()
         {
+            Window.SetTitle("AirHockey");
+            Window.SetSize(600, 800);
 
+            paddle Playerpaddle = new;
         }
 
         /// <summary>
