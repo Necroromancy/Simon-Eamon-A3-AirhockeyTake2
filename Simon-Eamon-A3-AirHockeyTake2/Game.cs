@@ -17,7 +17,7 @@ namespace Game10003
             Window.SetTitle("AirHockey");
             Window.SetSize(600, 800);
 
-            paddle Playerpaddle = new;
+     
         }
 
         /// <summary>
@@ -25,7 +25,8 @@ namespace Game10003
         /// </summary>
         public void Update()
         {
-
+            Playerpaddle.UpdatePosition();
+            EnemyPaddle.UpdatePosition();
         }
     }
 }
