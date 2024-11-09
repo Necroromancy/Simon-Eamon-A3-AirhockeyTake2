@@ -26,6 +26,9 @@ namespace Game10003
         public void Update()
         {
             Playerpaddle.UpdatePosition();
+            {
+
+            }
             EnemyPaddle.UpdatePosition();
         }
     }

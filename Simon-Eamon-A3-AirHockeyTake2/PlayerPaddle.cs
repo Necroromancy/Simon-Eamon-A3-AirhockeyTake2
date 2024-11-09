@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Numerics;
+
 namespace Game10003
 {
-    public class Puck
+    public class PlayerPaddle
     {
         public Vector2 position;
         public Vector2 velocity;
@@ -18,3 +19,6 @@ namespace Game10003
         }
     }
 }
+
+
+
