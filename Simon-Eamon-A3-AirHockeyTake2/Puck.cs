@@ -16,5 +16,12 @@ namespace Game10003
         {
 
         }
+
+
+        public void UpdateVelocity()
+        {
+
+        }
+
     }
 }

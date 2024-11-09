@@ -6,7 +6,7 @@ namespace Game10003
     public class PlayerPaddle
     {
         public Vector2 position;
-        public Vector2 velocity;
+        
 
         public void Render()
         {
@@ -17,6 +17,9 @@ namespace Game10003
         {
 
         }
+
+        public bool IsTouchingPoint
+        {  get { return false; } }
     }
 }
 

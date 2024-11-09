@@ -6,30 +6,37 @@ namespace Game10003
   
     public class Game
     {
-        // Place your variables here:
+        //variables 
+        Puck puck;
+        PlayerPaddle player;
+        EnemyPaddle enemy;
 
-
-        /// <summary>
-        ///     Setup runs once before the game loop begins.
-        /// </summary>
         public void Setup()
         {
             Window.SetTitle("AirHockey");
             Window.SetSize(600, 800);
+            PlayerPaddle playerPaddle = new PlayerPaddle();
+            EnemyPaddle enemyPaddle = new EnemyPaddle();
 
      
         }
 
-        /// <summary>
-        ///     Update runs every frame.
-        /// </summary>
+    
+        //
         public void Update()
         {
-            Playerpaddle.UpdatePosition();
-            {
+          Window.ClearBackground(color: Color.White);
+            puck.UpdatePosition();
+            enemy.UpdatePosition();
+            player.UpdatePosition();
 
-            }
-            EnemyPaddle.UpdatePosition();
+            puck.Render();
+            player.Render();
+            enemy.Render();
+
+            Goal.Render();
+
         }
+
     }
 }
