@@ -1,41 +1,54 @@
 ﻿using System;
 using System.Numerics;
 
+
 namespace Game10003
 {
-  
+
     public class Game
     {
-        //variables 
+      //variables 
         Puck puck;
         PlayerPaddle player;
         EnemyPaddle enemy;
-
+        int score = 0;
+        
         public void Setup()
         {
-            Window.SetTitle("AirHockey");
+            Window.SetTitle("Air Hockey");
             Window.SetSize(600, 800);
-            PlayerPaddle playerPaddle = new PlayerPaddle();
-            EnemyPaddle enemyPaddle = new EnemyPaddle();
+        
+            player = new PlayerPaddle();
+            enemy = new EnemyPaddle();
+            puck = new Puck();
+         
 
-     
         }
 
-    
+
         //
         public void Update()
         {
-          Window.ClearBackground(color: Color.White);
-            puck.UpdatePosition();
+            Draw.FillColor = Color.Green;
+            Draw.LineColor = Color.Black;
+
+
+            Window.ClearBackground(Color.White);
+
+
+            
+           
             enemy.UpdatePosition();
             player.UpdatePosition();
 
+            puck.UpdatePosition();
             puck.Render();
+
             player.Render();
             enemy.Render();
 
-            Goal.Render();
-
+            Text.Draw($"Score: {score}", 50, 700);
+            
         }
 
     }
