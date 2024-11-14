@@ -14,7 +14,7 @@ namespace Game10003
         {
             Draw.FillColor = Color.Clear;
             Draw.LineColor = Color.Red;
-            Draw.Rectangle( position , radius );
+            //Draw.Rectangle( position , radius );
         }
 
         
