@@ -9,9 +9,7 @@ public class PlayerPaddle
     public Vector2 position;
     int radius = 20;
 
-
-
-
+    
     // draw player
     public void Render()
     {

@@ -1,9 +1,8 @@
 ﻿
 using System;
 using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 namespace Game10003;
-
-
 
 public class Puck
 {
@@ -30,16 +29,20 @@ public class Puck
     public void UpdatePosition()
     {
         UpdateVelocity();
+        ConstrainToWindowBounds();
         position += velocity * Time.DeltaTime;
     }
 
 
+
     public void UpdateVelocity()
     {
-        //velocity = Random.Direction() * 360;
         radius = 15;
-       // position = Random.Vector2(radius, Window.Width - radius, radius, Window.Height - radius);
+
+        
+        //position = Random.Vector2(radius, Window.Width - radius, radius, Window.Height - radius);
     }
+
     public bool ConstrainToWindowBounds()
     {
         // Keep  Puck inside screen

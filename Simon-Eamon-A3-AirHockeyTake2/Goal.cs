@@ -7,16 +7,20 @@ namespace Game10003
     public class Goal
     {
         public Vector2 position;
-        float radius = 55;
-        public Vector2 size;
+         float radius;
+        Color color;
+       
+        public Goal()
+        {
+            position = new Vector2(330, 780);
+            radius = 55;
+        }
 
         public void Render()
         {
             Draw.FillColor = Color.Clear;
             Draw.LineColor = Color.Red;
-            //Draw.Rectangle( position , radius );
+            Draw.Rectangle( position.X, position.Y , radius, radius );
         }
-
-        
     }
 }
